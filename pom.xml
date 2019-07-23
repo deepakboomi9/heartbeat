@@ -29,13 +29,13 @@
             <plugin>
 			  <groupId>org.mule.tools.maven</groupId>
 			  <artifactId>mule-maven-plugin</artifactId>
-			  <version>3.2.3</version>
+			  <version>3.2.7</version>
 			  <extensions>true</extensions>
-			  <configuration>
-<!--  				  <standaloneDeployment>
+<!--  			  <configuration>
+				  <standaloneDeployment>
 			  	    <muleHome>/home/ubuntu/mule-enterprise-standalone-4.2.0</muleHome>
 			        <muleVersion>4.2.0</muleVersion>
-			  	</standaloneDeployment>  -->
+			  	</standaloneDeployment>
 		        <cloudHubDeployment>
 		            <uri>https://anypoint.mulesoft.com</uri>
 		            <muleVersion>4.2.0</muleVersion>
@@ -47,17 +47,17 @@
 		                <http.port>8081</http.port>
 		            </properties>
 		        </cloudHubDeployment>
-    			</configuration>
-			<!--	  <configuration>
-	            <deploymentType>standalone</deploymentType>
+    			</configuration> -->
+		  <configuration>
+	            <deploymentType>arm</deploymentType>
 	            <muleVersion>4.2.0</muleVersion>
-	            <username>thejaboomi708</username>
-	            <password>Theja@10</password>
+	            <username>mulesoft999</username>
+	            <password>Mulesoft@1</password>
 	            <redeploy>true</redeploy>
 	            <target>local</target>
 	            <targetType>Server</targetType>
 	            <environment>Sandbox</environment>
-	        </configuration> -->
+	        </configuration>
 	        <executions>
 	            <execution>
 	                <id>deploy</id>
@@ -65,12 +65,14 @@
 	                <goals>
 	                    <goal>deploy</goal>
 	                </goals>
-	            </execution>
+	            <configuration>
+                            <classifier>mule-application</classifier>
+                        </configuration>
+                    </execution>
 	        </executions>
 		</plugin>
         </plugins>
-	</build>
-		
+	</build>	
 	<dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
