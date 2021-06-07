@@ -13,6 +13,7 @@ phases:
       - echo Tests phase initiated...
       - echo $CODEBUILD_SRC_DIR
       - cd $CODEBUILD_SRC_DIR/
+      - echo Evnironment $env
       - mvn clean test #-Dmule.env=$MULE_ENV -Dmule.key=$MULE_KEY
   build:
     commands:
