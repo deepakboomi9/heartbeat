@@ -4,8 +4,8 @@ env:
     JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
     MULE_ENV: "/CodeBuild/mule-env"
     PASSWORD: "/CodeBuild/password"
-  #parameter-store:
-    #MULE_KEY: /test/mulesoft/MULE_KEY
+  parameter-store:
+    MULE_KEY: /CodeBuild/MULE_KEY
 phases:
   pre_build:
     commands:
