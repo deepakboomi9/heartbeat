@@ -19,11 +19,11 @@ phases:
   build:
     commands:
       - echo Build package started on `date`      
-      - mvn package -DskipTests#-Dmule.env=$MULE_ENV -Dmule.key=$MULE_KEY -DskipTests
+      - mvn package -DskipTests -Denv=$env #-Dmule.env=$MULE_ENV -Dmule.key=$MULE_KEY -DskipTests
   post_build:
     commands:
       - echo Deploy started on `date`
-      - mvn deploy -DmuleDeploy -DskipTests -Denv=dev #-Dmule.env=$MULE_ENV -Dmule.key=$MULE_KEY -Dworkers=$WORKERS -DworkerType=$WORKER_TYPE -Denvironment=$ENVIRONMENT -Dusername=$USERNAME -Dpassword=$PASSWORD -DappName=$APP_NAME -DbusinessGroup=$BUSINESS_GROUP -DbusinessGroupId=$BUSINESS_GROUP_ID -Dregion=$REGION -DskipTests
+      - mvn deploy -DmuleDeploy -DskipTests -Denv=$env #-Dmule.env=$MULE_ENV -Dmule.key=$MULE_KEY -Dworkers=$WORKERS -DworkerType=$WORKER_TYPE -Denvironment=$ENVIRONMENT -Dusername=$USERNAME -Dpassword=$PASSWORD -DappName=$APP_NAME -DbusinessGroup=$BUSINESS_GROUP -DbusinessGroupId=$BUSINESS_GROUP_ID -Dregion=$REGION -DskipTests
 artifacts:
   files:
   - target/*.jar
