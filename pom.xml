@@ -41,7 +41,7 @@
 						<environment>Sandbox</environment>
 						<!-- <businessGroup>${businessGroup}</businessGroup> -->
 						<properties>
-							<prop.env>dev</prop.env>
+							<env>dev</env>
 						</properties>
 					</armDeployment>
 					<executions>
