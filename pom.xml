@@ -41,7 +41,7 @@
 						<environment>Sandbox</environment>
 						<!-- <businessGroup>${businessGroup}</businessGroup> -->
 						<properties>
-							<env>$MULE_ENV</env>
+							<env>${MULE_ENV}</env>
 						</properties>
 					</armDeployment>
 					<executions>
