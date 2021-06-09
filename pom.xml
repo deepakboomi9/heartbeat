@@ -40,6 +40,9 @@
 						<password>Mulesoft@123</password>
 						<environment>Sandbox</environment>
 						<!-- <businessGroup>${businessGroup}</businessGroup> -->
+						<properties>
+							<prop.env>dev</prop.env>
+						</properties>
 					</armDeployment>
 					<executions>
 						<execution>
