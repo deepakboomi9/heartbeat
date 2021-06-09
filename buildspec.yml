@@ -2,7 +2,7 @@ version: 0.2
 env:
   variables:
     JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
-    MULE_ENV: "/CodeBuild/mule-env"
+    #MULE_ENV: "/CodeBuild/mule-env"
     PASSWORD: "/CodeBuild/password"
   parameter-store:
     MULE_KEY: /CodeBuild/MULE_KEY
@@ -13,7 +13,7 @@ phases:
       - echo Tests phase initiated...
       - echo $CODEBUILD_SRC_DIR
       - cd $CODEBUILD_SRC_DIR/
-      - echo Evnironment $env
+      - echo Evnironment $MULE_ENV
       - echo $MULE_KEY
       - mvn clean test #-Dmule.env=$MULE_ENV -Dmule.key=$MULE_KEY
   build:
